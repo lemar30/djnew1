@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Главная</title>
+	<link rel="stylesheet" href="static/css/style.css">
+	<script src="static/jskript.js" defer  ></script>
+</head>
+<body>
+	<header>
+
+		<div class="logo"> 
+			<img src="static/img/logo1.png" alt="LEMAR prod." class="logo1">
+			<!-- LEMAR prod.-->
+		
+		<nav>
+			<ul class="menu">
+				<li>
+					<a href="#Razdel1">О проекте</a>
+				</li>
+				<li>
+					<a href="#Razdel2">Особенности</a>
+				</li>
+				<li>
+					<a href="#Razdel3">Музыка</a>
+				</li>
+				<li>
+					<a href="#Razdel4">Контакты</a>
+				</li>
+			</ul>
+		</nav>
+		<nav>
+			<ul class="menu">
+				<li>
+					<a href="">Войти</a>
+				</li>
+				<li>
+					<a href="">Зарегистрироваться</a>
+				</li>
+
+			</ul>
+		</nav>
+<p class="citate">„С помощью музыки мы гипнотизируем людей, низводя их до примитивного уровня, и там, находя их самое слабое место, мы можем им вбить в голову все, что угодно.“ — <i>Джими Хендрикс</i></p>
+		</div>
+	</header>
+    <div class="project">
+    	<a name="Razdel1"></a>
+		<img src="static/img/project1.png" alt="none" class="project1">
+		
+    </div>
+		
+	<div class="whatisproject">
+			<p >Этот проект создан для расширения сознания людей, развития творческих способностей в разных сферах - музыка, кино, живопись, акционизм и многих других.</p>
+	</div>
+<div>
+	<img src="static/img/wave.png" alt="none" class="wave">
+</div>
+<div class="special">
+	<a name="Razdel2"></a>
+		<img src="static/img/special.png" alt="none" class="special1">
+    </div>
+
+<div class="spezialien">
+	
+	<div class="spezialien_item" id="anime">
+		<img src="static/img/camera.png" alt="none">
+		<h3>Кино</h3>
+		<p>Трешовые короткометражки и андеграудные клипы</p>
+	</div>
+	
+	<div class="spezialien_item" id="anime1">
+		<img src="static/img/pick.png" alt="none">
+		<h3>Музыка</h3>
+		<p>Неоновый панк прямиком из Омских подвалов</p>
+	</div>
+	
+	
+	<div class="spezialien_item" id="anime2">
+		<img src="static/img/theatre.png" alt="none">
+		<h3>Перформансы</h3>
+		<p>Вовлекаем людей в придуманные миры и заставляем в них поверить</p>
+	</div>
+
+</div>
+<div>
+	<img src="static/img/woman2.png" alt="none" class="shower">
+</div>
+
+<div>
+	<a name="Razdel3"></a>
+	<img src="static/img/music.png" alt="none" class="music1">
+</div>
+
+
+<!--
+<div class="audio_block">
+	<div class="audio_item">
+		<h3>Павел Кабаков (Котлован)</h3>
+		<p>Mushroom</p>
+	 <audio controls>
+    <source src="static/music/mushroom.mp3" type="audio/ogg; codecs=vorbis">
+    Тег audio не поддерживается вашим браузером. 
+    <a href="static/music/mushroom.mp3">Скачайте музыку</a>.
+  </audio>
+  </div>
+<div class="audio_item">
+	<h3>Алексей Маркин (LeMar)</h3>
+		<p>Ты или Я</p>
+	<audio controls>
+    <source src="static/music/LeMar2.mp3" type="audio/ogg; codecs=vorbis">
+    Тег audio не поддерживается вашим браузером. 
+    <a href="static/music/LeMar2.mp3">Скачайте музыку</a>.
+</div>
+
+</div>-->
+<div>
+	<img src="static/img/witches.png" alt="none" class="witches1">
+</div>
+<footer>
+	<a name="Razdel4"></a>
+	<div>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Присоединиться">
+</form>
+	<!--<form name="test" action="" method="post">
+		{{form.as_p}}
+		<fieldset>
+ <p class="firstname">Присоединяйся к нам!</p><br> <br>
+ <label>Твоё имя: <input name="name" type="text" required></label><br> <br>
+ <label>Телефон: <input name="telefon" type="tel" required></label><br> <br>
+ &lt;!&ndash; <button>Присоединиться</button> &ndash;&gt;
+ <input type = "submit" name = "submit1" value = "Присоединиться"
+</fieldset>
+</form>-->
+</div>
+<div>
+	<img src="static/img/logo1.png" alt="LEMAR prod." class="logo2">
+</div>
+<div class="vkwrite"> 
+<p>Написать нам в ВК</p>
+	<a href="https://vk.com/lemar_30" target="_blank"><img src="static/img/VK.png" alt="none" class="vk1"></a>
+	</div>
+</footer>
+
+
+
+</body>
+</html>
