@@ -199,7 +199,6 @@ class LoginForm(forms.Form):
         return ret
 
 
-
 def _base_signup_form_class():
     """
     Currently, we inherit from the custom form, if any. This is all
