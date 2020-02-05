@@ -198,7 +198,6 @@ class LoginForm(forms.Form):
             request.session.set_expiry(0)
         return ret
 
-
 def _base_signup_form_class():
     """
     Currently, we inherit from the custom form, if any. This is all
