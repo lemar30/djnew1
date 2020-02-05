@@ -198,6 +198,14 @@ class LoginForm(forms.Form):
             request.session.set_expiry(0)
         return ret
 
+class _DummyCustomSignupForm(forms.Form):
+
+    def signup(self, request, user):
+        """
+        Invoked at signup time to complete the signup of the user.
+        """
+        pass
+
 def _base_signup_form_class():
     """
     Currently, we inherit from the custom form, if any. This is all
