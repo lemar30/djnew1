@@ -39,13 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'oprosapp',
     'django.contrib.sites',
+    'bootstrapform',
+    'allauth_bootstrap',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.vk',
     'bootstrap4',
-    'bootstrapform',
-    'allauth_bootstrap',
+
 ]
 
 MIDDLEWARE = [
