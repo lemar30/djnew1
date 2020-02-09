@@ -1,5 +1,14 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Вход</title>
+    <meta name="description" content="Описание страницы" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
 {% extends "account/base.html" %}
-
+{% load bootstrap4 %}
 {% load i18n %}
 {% load account socialaccount %}
 
@@ -35,12 +44,14 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 <form class="login" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
-  {{ form.as_p }}
+  {% bootstrap_form form %}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
   <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+  <button class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
 </form>
 
 {% endblock %}
+ </body>
+</html>
