@@ -21,14 +21,14 @@
 
     <div class="row">
   <div class="col-md-2 ml-3">
-      <strong>Menu:</strong>
+      <strong>Меню:</strong>
       <ul>
         {% if user.is_authenticated %}
         <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
         <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
         {% else %}
-        <li><a href="{% url 'account_login' %}">Sign In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+        <li><a href="{% url 'account_login' %}">Войти</a></li>
+        <li><a href="{% url 'account_signup' %}">Регистрация</a></li>
         {% endif %}
       </ul>
     </div>
