@@ -24,8 +24,9 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
+<div class="border border-primary rounded col-md-4 mt-3 ml-3">
 <div class="row">
-  <div class="col-md-2 ml-3">
+  <div class="col-md-10 ml-3">
 <h1>{% trans "Sign In" %}</h1>
 
 {% get_providers as socialaccount_providers %}
@@ -54,7 +55,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 {% endif %}
 <div class="row">
-  <div class="col-md-2 ml-3">
+  <div class="col-md-6 ml-3 pb-3">
 <form class="login" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
   {% bootstrap_form form %}
@@ -66,6 +67,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 </form>
   </div>
 </div>
+  </div>
 {% endblock %}
  </body>
 </html>
