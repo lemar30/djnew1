@@ -19,20 +19,42 @@
     </div>
     {% endif %}
 
-    <div class="row">
-  <div class="col-md-2 ml-3">
-      <strong>Меню:</strong>
-      <ul>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
-        {% else %}
-        <li><a href="{% url 'account_login' %}">Войти</a></li>
-        <li><a href="{% url 'account_signup' %}">Регистрация</a></li>
-        {% endif %}
-      </ul>
-    </div>
+
+    <div class="container-fluid">
+     <div class="row">
+    <div class="col-sm bg-dark"> <a class="nav-link" href="">Ссылка1</a></a></div>
+    <div class="col-sm bg-dark"><a class="nav-link" href="">Ссылка2</a></a></div>
+    <div class="col-sm bg-dark"><a class="nav-link" href="">Ссылка3</a></a></div>
+    <div class="col-sm bg-dark"><a class="nav-link" href="">Ссылка4</a></a></div>
+    <div class="col-sm bg-dark"><a class="nav-link" href="">Ссылка5</a></a></div>
+
+    <div class="col-sm bg-dark">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark d-flex">
+  <ul class="navbar-nav">
+      {% if user.is_authenticated %}
+
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'account_email' %}">Change E-mail</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="{% url 'account_logout' %}">Sign Out</a>
+    </li>
+       {% else %}
+      <li class="nav-item active">
+      <a class="nav-link" href="{% url 'account_login' %}">Войти</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'account_signup' %}">Регистрация</a></a>
+    </li>
+       {% endif %}
+  </ul>
+</nav>
 </div>
+
+
+       </div>
+    </div>
+
     {% block content %}
     {% endblock %}
     {% endblock %}
