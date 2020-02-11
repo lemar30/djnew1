@@ -7,4 +7,5 @@ from account import views as user_views
 urlpatterns = [
     path('signup/', user_views.SignupView.as_view(template_name="account/signup.html"), name='signup'),
     path('login/', user_views.SignupView.as_view(template_name="account/login.html"), name='login'),
+    path('', views.dashboard, name='dashboard'),
 ]

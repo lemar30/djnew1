@@ -12,7 +12,7 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.debug import sensitive_post_parameters
 from django.views.generic.base import TemplateResponseMixin, TemplateView, View
 from django.views.generic.edit import FormView
-
+from django.shortcuts import render, redirect
 
 from . import app_settings, signals
 from .forms import (
@@ -28,3 +28,6 @@ class SignupView(SignupView):
 class LoginView(LoginView):
     template_name = "account/login.html"
 
+def dashboard(request):
+
+    return render(request, 'account/dashboard.html', context={"dashboard": dashboard})

@@ -138,7 +138,7 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 ACCOUNT_LOGOUT_REDIRECT_URL = '/login/'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/dashboard/'
 
 ACCOUNT_FORMS = {
     'login': 'allauth.account.forms.LoginForm',
